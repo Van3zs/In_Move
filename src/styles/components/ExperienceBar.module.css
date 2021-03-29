@@ -1,0 +1,41 @@
+.experienceBar {
+    display: flex;
+    align-items: center;
+}
+
+.experienceBar span {
+    font-size: 1rem;
+}
+.experienceBar > div {
+    flex: 1;
+    height: 4px;
+    border-radius: 4px;
+    background: var(--gray-line);
+    margin: 0 1.5rem;
+    position: relative;
+}
+
+.experienceBar > div > div {
+    height: 4px;
+    border-radius: 4px;
+    background: var(--green);
+    animation-name: experienceColor;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes experienceColor {
+    50% {
+        background: rgb(91, 255, 91);
+    }
+
+    100% {
+        background: rgb(181, 255, 10);
+    }
+}
+
+span.currentExperience {
+    position: absolute;
+    top: 12px;
+    transform: translatex(-50%);
+}
